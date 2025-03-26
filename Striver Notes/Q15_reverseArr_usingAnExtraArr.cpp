@@ -8,7 +8,7 @@ void reverseArr(vector<int> &arr, int n)
     for (int i = 0; i < n; i++)
     {
         arrReversed[i] = arr[n - i - 1];
-        cout << i << " ";
+        cout << arrReversed[i] << " ";
     }
 }
 int main()
