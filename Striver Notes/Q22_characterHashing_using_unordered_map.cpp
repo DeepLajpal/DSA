@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>;
 using namespace std;
 
-// highest time taken to solve: ~15min
 int main()
 {
     string charString;
@@ -9,7 +8,7 @@ int main()
     cin >> charString;
 
     // pre-storing
-    map<char, int> mpp;
+    unordered_map<char, int> mpp;
     for (int i = 0; i < charString.length(); i++)
     {
         mpp[charString[i]] += 1;
