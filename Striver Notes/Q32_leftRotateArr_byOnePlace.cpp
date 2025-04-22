@@ -14,6 +14,8 @@ void rotateArrayLeftByOne(vector<int> &arr)
 int main()
 {
     vector<int> arr = {1, 2, 3, 4, 5};
+    int arr2[4] = {2, 5, 6, 9};
+    cout << arr2 << endl;
     rotateArrayLeftByOne(arr);
     for (auto i : arr)
     {
