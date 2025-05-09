@@ -13,15 +13,12 @@ int longestSubarray(vector<int> &arr, int k)
         int subArraySum = 0;
         for (int j = i + 1; j < n; j++)
         {
-                subArraySum += arr[j];
-                subArrayLength += 1;
+            subArraySum += arr[j];
+            subArrayLength += 1;
+            // if (subArraySum > k) // Early break works only for positive numbers; with negatives, it may skip valid subarrays. because later negative num reduces the sum back to k.
+            //     break;
             if (subArraySum == k)
-            {
-                if (largestSubArrayLength < subArrayLength)
-                {
-                    largestSubArrayLength = subArrayLength;
-                }
-            }
+                largestSubArrayLength = max(largestSubArrayLength, subArrayLength);
         }
     }
     return largestSubArrayLength;
