@@ -15,17 +15,18 @@ vector<int> leadersOfArray(vector<int> &arr)
 
     // since right most element of the given arr is always the leader/ (n-1)th element of the given array
     leadersArr.push_back(arr[n - 1]);
+    int currentRightSideMax = arr[n - 1];
 
     // pushing the rest leaders
     for (int i = n - 2; i >= 0; i--)
     {
-        int currentRightSideMax = arr[n - 1];
-        if (arr[i] > arr[i + 1] && arr[i] > currentRightSideMax)
+        if (arr[i] > currentRightSideMax)
         {
             leadersArr.push_back(arr[i]);
+            currentRightSideMax = arr[i];
         }
-        currentRightSideMax = max(arr[i], currentRightSideMax);
     }
+    reverse(leadersArr.begin(), leadersArr.end());
     return leadersArr;
 }
 
