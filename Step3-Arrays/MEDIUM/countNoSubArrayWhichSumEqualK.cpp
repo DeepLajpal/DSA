@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int findAllSubarraysWithGivenSum(vector<int> arr, int k)
+int findSubarraysSumEqualsK(vector<int> arr, int k)
 {
     int count = 0;
     int prefixSum = 0;
@@ -27,7 +27,7 @@ int main()
     vector<int> arr1 = {3, 1, 2, 4};
     vector<int> arr2 = {3, -3, 1, 1, 1};
     int k1 = 6, k2 = 3;
-    int cnt = findAllSubarraysWithGivenSum(arr2, k2);
+    int cnt = findSubarraysSumEqualsK(arr2, k2);
     cout << "The number of subarrays is: " << cnt << "\n";
     return 0;
 }
