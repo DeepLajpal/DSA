@@ -61,7 +61,7 @@ int bruteCountExactlyKDistinctSubstrings(string &s, int k)
 //     result += (right - left + 1)
 // return result
 
-// Intuition (Optimal): Use sliding window for atMost(k), then exactly k = atMost(k) - atMost(k-1)
+// Intuition (Optimal): Use a sliding window to count all substrings ending at each index that contain at most k distinct characters by expanding the right pointer and shrinking from the left when distinct count exceeds k.
 int optimalCountAtMostKDistinctSubstrings(string s, int k)
 {
     // Left pointer and result
