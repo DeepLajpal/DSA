@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// 108 Problem: Count Number of Substrings
+// 108 Problem: Count Number of Substrings with Exactly K Distinct Characters
+// Key Insight: exactly k = atMost(k) - atMost(k-1)
 
 // Pseudocode for brute force:
 // for i from 0 to n-1:
@@ -13,7 +14,7 @@ using namespace std;
 //         if frequency map size > k:
 //             break
 // return count
-// Brute force: For every possible substring, count if it has exactly k distinct characters.
+// Intuition (Brute): Check all substrings, use map to track distinct chars, count when size = k
 
 int bruteCountExactlyKDistinctSubstrings(string &s, int k)
 {
@@ -47,6 +48,7 @@ int bruteCountExactlyKDistinctSubstrings(string &s, int k)
     // Return total count of valid substrings
     return substringCount;
 }
+// TC: O(n²), SC: O(k)
 
 // Pseudocode for optimal:
 // left = 0, result = 0
@@ -58,7 +60,8 @@ int bruteCountExactlyKDistinctSubstrings(string &s, int k)
 //         left++
 //     result += (right - left + 1)
 // return result
-// Optimal: Use a sliding window to efficiently count substrings with at most k distinct characters.
+
+// Intuition (Optimal): Use sliding window for atMost(k), then exactly k = atMost(k) - atMost(k-1)
 int optimalCountAtMostKDistinctSubstrings(string s, int k)
 {
     // Left pointer and result
