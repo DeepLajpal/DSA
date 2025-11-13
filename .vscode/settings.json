@@ -1,5 +1,6 @@
 {
   "files.associations": {
+    "*.gs": "javascript",
     "array": "cpp",
     "atomic": "cpp",
     "bitset": "cpp",

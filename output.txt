@@ -1,1 +1,5 @@
-1
+Original LL: 4 6 7 10 
+After Insertion on head: 100 4 6 7 10 
+After Insertion on tail: 100 4 6 7 10 200 
+After Insertion by position: 100 4 6 7 10 200 300 
+After Insertion val Before El: 100 4 6 7 10 400 200 300 
