@@ -148,12 +148,6 @@ void print(Node *head)
     cout << endl;
 }
 
-// Deletion - 4 question
-// 1) Deletion on head
-// 2) Deletion on tail
-// 3) Deletion by position
-// 4) Deletion by value
-
 int main()
 {
     vector<int> arr = {4, 6, 7, 10};
